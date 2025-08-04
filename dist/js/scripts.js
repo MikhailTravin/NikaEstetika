@@ -332,27 +332,49 @@ window.addEventListener('scroll', indents);
 //========================================================================================================================================================
 
 //Карта
-const map = document.querySelector("#map");
-if (map) {
-  if ("undefined" !== typeof ymaps) ymaps.ready((() => initMainMap()));
-  else console.warn("Yandex Maps API не загружено для карты #map");
-  function initMainMap() {
-    try {
-      var myMap = new ymaps.Map("map", {
-        center: [55.812818, 37.755859],
-        zoom: 18,
-        controls: ["zoomControl"],
-        behaviors: ["drag"]
-      }, {
-        searchControlProvider: "yandex#search"
-      });
-      const placemark1 = new ymaps.Placemark([55.812818, 37.755859], {}, {
-      });
-      myMap.geoObjects.add(placemark1);
-    } catch (error) {
-      console.error("Ошибка при инициализации карты #map:", error);
+const mapContainer = document.querySelector("#map");
+
+function loadYandexMapScript() {
+  const script = document.createElement('script');
+  script.src = 'https://api-maps.yandex.ru/2.1/?apikey=YOUR_API_KEY&lang=ru_RU';
+  script.onload = () => {
+    if (typeof ymaps !== 'undefined') {
+      ymaps.ready(initMainMap);
+    } else {
+      console.warn('Yandex Maps API не загружено');
     }
+  };
+  script.onerror = () => console.error('Ошибка загрузки Yandex Maps API');
+  document.body.appendChild(script);
+}
+
+function initMainMap() {
+  try {
+    const myMap = new ymaps.Map("map", {
+      center: [55.812818, 37.755859],
+      zoom: 18,
+      controls: ["zoomControl"],
+      behaviors: ["drag"]
+    }, {
+      searchControlProvider: "yandex#search"
+    });
+
+    const placemark1 = new ymaps.Placemark([55.812818, 37.755859], {}, {});
+    myMap.geoObjects.add(placemark1);
+  } catch (error) {
+    console.error("Ошибка при инициализации карты #map:", error);
   }
+}
+
+if (mapContainer) {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      loadYandexMapScript();
+      observer.unobserve(mapContainer); 
+    }
+  }, { threshold: 0.1 });
+
+  observer.observe(mapContainer);
 }
 
 //========================================================================================================================================================
