@@ -961,6 +961,7 @@
     // .block-reviews__slide
 
     &__slide {
+        cursor: default;
         &:nth-child(odd) {
             margin: 0px 0px 30px 0px;
             @media (max-width: 768px) {
