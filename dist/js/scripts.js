@@ -424,15 +424,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //========================================================================================================================================================
-
-window.addEventListener('load', function () {
-  var loadStylesheet = function (href) {
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = href;
-    document.head.appendChild(link);
-  };
-
-  loadStylesheet('css/swiper.min.css');
-  loadStylesheet('css/fancybox.min.css');
-});
