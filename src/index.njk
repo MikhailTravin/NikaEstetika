@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная страница</title>
+	{% include 'blocks/head.njk' %}
+</head>
+
+<body class="preload mp">
+	<div class="main-wrapper-outer">
+		{% include 'blocks/header.njk' %}
+		<main class="main">
+
+			<div class="block-intro block1">
+				<img src="img/icon/circle2.svg" alt="" class="block-intro__circle1">
+				<img src="img/icon/circle3.svg" alt="" class="block-intro__circle2">
+				<img src="img/icon/circle4.svg" alt="" class="block-intro__circle3">
+				<img src="img/icon/circle5.svg" alt="" class="block-intro__circle4">
+				<img src="img/icon/circle6.svg" alt="" class="block-intro__circle5">
+				<div class="container">
+					<div class="block-intro__content">
+						<div class="block-intro__body">
+							<h1 class="title1">
+								Современная клиника
+								<span>
+									косметологии
+									<img src="img/icon/circle1.svg" alt="">
+								</span>
+							</h1>
+							<div class="block-intro__subtitle">
+								<div class="block-intro__image">
+									<img src="img/image2.webp" alt="">
+								</div>
+								<p>
+									Получите экспресс-консультацию косметолога или запишитесь онлайн на удобное для вас
+									время
+								</p>
+							</div>
+							<a href="#" class="btn">Записаться на прием</a>
+						</div>
+						<img src="img/image1.webp" alt="" class="block-intro__pic1">
+					</div>
+				</div>
+			</div>
+
+			<div class="block-services block1">
+				<div class="container">
+					<div class="heading-complex">
+						<h2 class="title2">
+							Услуги
+						</h2>
+					</div>
+					<div class="block-services__content">
+						<a href="#" class="block-services__column down">
+							<div class="block-services__image">
+								<img loading="lazy" src="img/image3.webp" alt="">
+							</div>
+							<span>Ботулинотерапия</span>
+						</a>
+						<a href="#" class="block-services__column">
+							<div class="block-services__image">
+								<img loading="lazy" src="img/image4.webp" alt="">
+							</div>
+							<span>Биореавилитация</span>
+						</a>
+						<a href="#" class="block-services__column down">
+							<div class="block-services__image">
+								<img loading="lazy" src="img/image5.webp" alt="">
+							</div>
+							<span>Мезотерапия</span>
+						</a>
+						<a href="#" class="block-services__column down down2">
+							<div class="block-services__image">
+								<img loading="lazy" src="img/image6.webp" alt="">
+							</div>
+							<span>Контурная пластика</span>
+						</a>
+						<a href="#" class="block-services__column down2">
+							<div class="block-services__image">
+								<img loading="lazy" src="img/image7.webp" alt="">
+							</div>
+							<span>Филлеры</span>
+						</a>
+						<a href="#" class="block-services__column down down2">
+							<div class="block-services__image">
+								<img loading="lazy" src="img/image8.webp" alt="">
+							</div>
+							<span>Увеличение губ</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-portfolio block1">
+				<img loading="lazy" src="img/icon/circle2.svg" alt="" class="block-portfolio__circle1">
+				<img loading="lazy" src="img/icon/circle4.svg" alt="" class="block-portfolio__circle2">
+				<img loading="lazy" src="img/icon/circle4.svg" alt="" class="block-portfolio__circle3">
+				<img loading="lazy" src="img/icon/circle4.svg" alt="" class="block-portfolio__circle4">
+				<img loading="lazy" src="img/icon/circle3.svg" alt="" class="block-portfolio__circle5">
+				<div class="container">
+					<div class="heading-complex">
+						<h2 class="title2">
+							Портфолио
+						</h2>
+						<div data-da=".block-portfolio__body, 768, last" class="arrows">
+							<div class="block-portfolio__arrow-prev arrow-prev">
+								<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+							</div>
+							<div class="block-portfolio__arrow-next arrow-next">
+								<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="block-portfolio__body">
+						<div class="block-portfolio__slider swiper">
+							<div class="block-portfolio__wrapper swiper-wrapper">
+								<a href="img/image9.webp" data-fancybox="gallery"
+									class="block-portfolio__slide swiper-slide">
+									<img loading="lazy" src="img/image9.webp" alt="">
+									<span class="before">
+										До
+									</span>
+									<span class="after">
+										После
+									</span>
+								</a>
+								<a href="img/image10.webp" data-fancybox="gallery"
+									class="block-portfolio__slide swiper-slide">
+									<img loading="lazy" src="img/image10.webp" alt="">
+									<span class="before">
+										До
+									</span>
+									<span class="after">
+										После
+									</span>
+								</a>
+								<a href="img/image11.webp" data-fancybox="gallery"
+									class="block-portfolio__slide swiper-slide">
+									<img loading="lazy" src="img/image11.webp" alt="">
+									<span class="before">
+										До
+									</span>
+									<span class="after">
+										После
+									</span>
+								</a>
+								<a href="img/image11.webp" data-fancybox="gallery"
+									class="block-portfolio__slide swiper-slide">
+									<img loading="lazy" src="img/image11.webp" alt="">
+									<span class="before">
+										До
+									</span>
+									<span class="after">
+										После
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-descr">
+				<div class="container">
+					<div class="heading-complex">
+						<h2 class="title1">
+							Попробуйте увеличение губ
+						</h2>
+					</div>
+					<div class="block-descr__content">
+						<div class="block-descr__top">
+							<div class="block-descr__image">
+								<img loading="lazy" src="img/image12.webp" alt="">
+							</div>
+							<div class="block-descr__body">
+								<p>
+									Губы — одна из самых чувственных зон лица, именно поэтому женщины рано или поздно
+									прибегают к
+									их коррекции гиалуроновой кислотой. Увеличение губ филлерами позволяет сделать их
+									пухлыми и
+									создать идеальную форму без помощи пластических операций, перманентного татуажа и
+									косметики.
+								</p>
+								<div class="block-descr__items">
+									<div class="block-descr__item">
+										<div class="block-descr__icon">
+											<img loading="lazy" src="img/icon/time.svg" alt="">
+										</div>
+										<div class="block-descr__title">
+											<div class="block-descr__name">30-60 минут</div>
+											<div class="block-descr__subname">Время процедуры</div>
+										</div>
+									</div>
+									<div class="block-descr__item">
+										<div class="block-descr__icon">
+											<img loading="lazy" src="img/icon/sync.svg" alt="">
+										</div>
+										<div class="block-descr__title">
+											<div class="block-descr__name">7-14 дней</div>
+											<div class="block-descr__subname">Реабилитация</div>
+										</div>
+									</div>
+									<div class="block-descr__item">
+										<div class="block-descr__icon">
+											<img loading="lazy" src="img/icon/calendar.svg" alt="">
+										</div>
+										<div class="block-descr__title">
+											<div class="block-descr__name">до 12 мес.</div>
+											<div class="block-descr__subname">Результат</div>
+										</div>
+									</div>
+									<div class="block-descr__item bg">
+										<div class="block-descr__icon">
+											<img loading="lazy" src="img/icon/price.svg" alt="">
+										</div>
+										<div class="block-descr__title">
+											<div class="block-descr__name">от 10 990 р</div>
+											<div class="block-descr__subname">Стоимость</div>
+										</div>
+									</div>
+								</div>
+								<a href="#" class="btn">Записаться на прием</a>
+								<div class="block-descr__text">
+									Точную стоимость процедуры вы сможете получить после консультации со специалистом
+								</div>
+							</div>
+						</div>
+						<div data-tabs="992" class="tabs">
+							<nav data-tabs-titles class="tabs__navigation">
+								<button type="button" class="tabs__title _tab-active">
+									<span>Описание</span>
+									<span class="plus-minus"></span>
+								</button>
+								<button type="button" class="tabs__title">
+									<span>Рекомендации</span>
+									<span class="plus-minus"></span>
+								</button>
+								<button type="button" class="tabs__title">
+									<span>Противопоказания</span>
+									<span class="plus-minus"></span>
+								</button>
+							</nav>
+							<div data-tabs-body class="tabs__content">
+								<div class="tabs__body">
+									<div class="tabs__descr">
+										<p>
+											Для придания объема и изменения контура губ используют инъекции с
+											наполнителем на основе гиалуроновой кислоты. Такие препараты
+											называются филлерами. Гиалуроновая кислота входит в состав кожи: ее главные
+											функции —
+											удержание молекул воды и предотвращение
+											трансэпидермальной потери влаги. Именно поэтому филлер не только увеличивает
+											губы, но и поддерживает идеальный водный баланс, устраняет
+											сухость и запускает процессы регенерации и омоложения.
+											<br>
+											<br>
+											Всего за одну процедуру можно решить сразу несколько задач: увеличить губы,
+											провести коррекцию их контура, улучшить состояние кожи и
+											сделать свою внешность ярче.
+										</p>
+										<div class="tabs__image">
+											<img loading="lazy" src="img/image13.webp" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__descr">
+										<p>
+											Для придания объема и изменения контура губ используют инъекции с
+											наполнителем на основе гиалуроновой кислоты. Такие препараты
+											называются филлерами. Гиалуроновая кислота входит в состав кожи: ее главные
+											функции —
+											удержание молекул воды и предотвращение
+											трансэпидермальной потери влаги. Именно поэтому филлер не только увеличивает
+											губы, но и поддерживает идеальный водный баланс, устраняет
+											сухость и запускает процессы регенерации и омоложения.
+											Всего за одну процедуру можно решить сразу несколько задач: увеличить губы,
+											провести коррекцию их контура, улучшить состояние кожи и
+											сделать свою внешность ярче.
+										</p>
+									</div>
+								</div>
+								<div class="tabs__body">
+									<div class="tabs__descr">
+										<p>
+											Для придания объема и изменения контура губ используют инъекции с
+											наполнителем на основе гиалуроновой кислоты. Такие препараты
+											называются филлерами. Гиалуроновая кислота входит в состав кожи: ее главные
+											функции —
+											удержание молекул воды и предотвращение
+											трансэпидермальной потери влаги. Именно поэтому филлер не только увеличивает
+											губы, но и поддерживает идеальный водный баланс, устраняет
+											сухость и запускает процессы регенерации и омоложения.
+											Всего за одну процедуру можно решить сразу несколько задач: увеличить губы,
+											провести коррекцию их контура, улучшить состояние кожи и
+											сделать свою внешность ярче.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-reviews">
+				<div class="container">
+					<div class="heading-complex">
+						<h2 class="title2">
+							Последние отзывы
+						</h2>
+						<div data-da=".block-reviews__body, 768, last" class="arrows">
+							<div class="block-reviews__arrow-prev arrow-prev">
+								<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+							</div>
+							<div class="block-reviews__arrow-next arrow-next">
+								<img loading="lazy" src="img/icon/arrow1.svg" alt="">
+							</div>
+						</div>
+					</div>
+					<div class="block-reviews__body">
+						<div class="block-reviews__slider swiper">
+							<div class="block-reviews__wrapper swiper-wrapper">
+								<div class="block-reviews__slide swiper-slide">
+									<div class="block-reviews__item">
+										<div class="block-reviews__top">
+											<div class="block-reviews__image">
+												<img loading="lazy" src="img/image14.webp" alt="">
+											</div>
+											<div class="block-reviews__titles">
+												<div class="block-reviews__name">Анастасия</div>
+												<div class="block-reviews__age">34 года</div>
+											</div>
+										</div>
+										<p>
+											Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+											продлением красоты. Врач косметолог поможет омолодить вашу кожу, исправить
+											контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+											новообразования.
+										</p>
+									</div>
+								</div>
+								<div class="block-reviews__slide swiper-slide">
+									<div class="block-reviews__item">
+										<div class="block-reviews__top">
+											<div class="block-reviews__image">
+												<img loading="lazy" src="img/image15.webp" alt="">
+											</div>
+											<div class="block-reviews__titles">
+												<div class="block-reviews__name">Наталья</div>
+												<div class="block-reviews__age">25 лет</div>
+											</div>
+										</div>
+										<p>
+											Врач косметолог поможет омолодить вашу кожу, исправить контур лица,
+											избавиться от шрамов и рубцов, удалить нежелательные новообразования.
+										</p>
+									</div>
+								</div>
+								<div class="block-reviews__slide swiper-slide">
+									<div class="block-reviews__item">
+										<div class="block-reviews__top">
+											<div class="block-reviews__image">
+												<img loading="lazy" src="img/image16.webp" alt="">
+											</div>
+											<div class="block-reviews__titles">
+												<div class="block-reviews__name">Светлана</div>
+												<div class="block-reviews__age">46 лет</div>
+											</div>
+										</div>
+										<p>
+											Связанные с эстетикой и продлением красоты. Врач косметолог поможет
+											омолодить вашу кожу, исправить контур лица, избавиться от шрамов и рубцов,
+											удалить нежелательные новообразования.
+											Косметология позволяет решать самые Связанные с эстетикой и продлением
+											красоты. Врач косметолог поможет
+											омолодить вашу кожу, исправить контур лица, избавиться от шрамов и рубцов,
+											удалить нежелательные новообразования.
+											Косметология позволяет решать самые
+										</p>
+										<a href="#" class="block-reviews__link">Читать полностью</a>
+									</div>
+								</div>
+								<div class="block-reviews__slide swiper-slide">
+									<div class="block-reviews__item">
+										<div class="block-reviews__top">
+											<div class="block-reviews__image">
+												<img loading="lazy" src="img/image17.webp" alt="">
+											</div>
+											<div class="block-reviews__titles">
+												<div class="block-reviews__name">Анна</div>
+												<div class="block-reviews__age">34 года</div>
+											</div>
+										</div>
+										<p>
+											Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+											продлением красоты. Врач косметолог поможет омолодить вашу кожу, исправить
+											контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+											новообразования.
+										</p>
+									</div>
+								</div>
+								<div class="block-reviews__slide swiper-slide">
+									<div class="block-reviews__item">
+										<div class="block-reviews__top">
+											<div class="block-reviews__image">
+												<img loading="lazy" src="img/image17.webp" alt="">
+											</div>
+											<div class="block-reviews__titles">
+												<div class="block-reviews__name">Анна</div>
+												<div class="block-reviews__age">34 года</div>
+											</div>
+										</div>
+										<p>
+											Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+											продлением красоты. Врач косметолог поможет омолодить вашу кожу, исправить
+											контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+											новообразования.
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-contacts">
+				<div class="container">
+					<div class="heading-complex">
+						<h2 class="title1">Как нас найти</h2>
+					</div>
+					<div class="block-contacts__content">
+						<div class="block-contacts__body">
+							<a href="#" class="block-contacts__column phone">
+								<div class="block-contacts__icon">
+									<img src="img/icon/phone-call.svg" alt="">
+								</div>
+								<div class="block-contacts__text">8 800 250 04 08</div>
+							</a>
+							<div class="block-contacts__column">
+								<div class="block-contacts__icon">
+									<img src="img/icon/map.svg" alt="">
+								</div>
+								<div class="block-contacts__text">
+									<span>г Ставрополь,</span> ул. Льва Толстого, д. 88
+								</div>
+							</div>
+							<div class="block-contacts__column">
+								<div class="block-contacts__icon">
+									<img src="img/icon/time.svg" alt="">
+								</div>
+								<div class="block-contacts__text">
+									Ежедневно с 10:00 до 22:00
+								</div>
+							</div>
+							<a href="#" class="block-contacts__column">
+								<div class="block-contacts__icon">
+									<img src="img/icon/mail.svg" alt="">
+								</div>
+								<div class="block-contacts__text">
+									support@nikaestetika.ru
+								</div>
+							</a>
+						</div>
+						<div id="map" class="block-contacts__map"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-questions">
+				<div class="container">
+					<div class="heading-complex">
+						<h2 class="title2">
+							Популярные вопросы и ответы
+						</h2>
+					</div>
+					<div class="block-questions__content">
+						<div data-spollers class="spollers">
+							<div class="spollers__item">
+								<div data-spoller class="spollers__title">
+									<div class="spollers__image">
+										<img loading="lazy" src="img/image3.webp" alt="">
+									</div>
+									<div class="spollers__center">
+										<span>Ботулинотерапия</span>
+										<div class="spollers__price">
+											от 8 990 р
+										</div>
+									</div>
+									<div class="spollers__right">
+										<div class="plus-minus"></div>
+									</div>
+								</div>
+								<div class="spollers__body">
+									<div class="spollers__tables">
+										<div class="spollers__table table-spollers">
+											<div class="table-spollers__title">
+												Препараты на основе гиалуроновой кислоты
+											</div>
+											<ul>
+												<li>
+													<div class="table-spollers__name">Ресалтис (О. КОИ2) мл.</div>
+													<span></span>
+													<div class="table-spollers__price">10 990 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Новакутан Фбио Лайт (Франция) 1
+														мл.</div>
+													<span></span>
+													<div class="table-spollers__price">14 990 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Новакутан Фбио Медиум (Франция) 1
+														мл.</div>
+													<span></span>
+													<div class="table-spollers__price">15 990 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Нювиа Интенс ЛВ (Италия) 1 мл.
+													</div>
+													<span></span>
+													<div class="table-spollers__price">16 490 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Стилаж М (Франция) 1 мл.</div>
+													<span></span>
+													<div class="table-spollers__price">17 490 р</div>
+												</li>
+											</ul>
+										</div>
+										<div class="spollers__table table-spollers">
+											<div class="table-spollers__title">
+												Ботулотооксины
+											</div>
+											<ul>
+												<li>
+													<div class="table-spollers__name">Push-up эффект губ</div>
+													<span></span>
+													<div class="table-spollers__price">2 990 р</div>
+												</li>
+											</ul>
+										</div>
+										<div class="spollers__table table-spollers">
+											<div class="table-spollers__title">
+												Удаление филлера
+											</div>
+											<ul>
+												<li>
+													<div class="table-spollers__name">Удаление филлеоа лонгидазой</div>
+													<span></span>
+													<div class="table-spollers__price">7 990 р</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="spollers__item">
+								<div data-spoller class="spollers__title">
+									<div class="spollers__image">
+										<img loading="lazy" src="img/image7.webp" alt="">
+									</div>
+									<div class="spollers__center">
+										<span>Увеличение губ</span>
+										<div class="spollers__price">
+											от 10 990 р
+										</div>
+									</div>
+									<div class="spollers__right">
+										<div class="plus-minus"></div>
+									</div>
+								</div>
+								<div class="spollers__body">
+									<div class="spollers__tables">
+										<div class="spollers__table table-spollers">
+											<div class="table-spollers__title">
+												Препараты на основе гиалуроновой кислоты
+											</div>
+											<ul>
+												<li>
+													<div class="table-spollers__name">Ресалтис (О. КОИ2) мл.</div>
+													<span></span>
+													<div class="table-spollers__price">10 990 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Новакутан Фбио Лайт (Франция) 1
+														мл.</div>
+													<span></span>
+													<div class="table-spollers__price">14 990 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Новакутан Фбио Медиум (Франция) 1
+														мл.</div>
+													<span></span>
+													<div class="table-spollers__price">15 990 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Нювиа Интенс ЛВ (Италия) 1 мл.
+													</div>
+													<span></span>
+													<div class="table-spollers__price">16 490 р</div>
+												</li>
+												<li>
+													<div class="table-spollers__name">Стилаж М (Франция) 1 мл.</div>
+													<span></span>
+													<div class="table-spollers__price">17 490 р</div>
+												</li>
+											</ul>
+										</div>
+										<div class="spollers__table table-spollers">
+											<div class="table-spollers__title">
+												Ботулотооксины
+											</div>
+											<ul>
+												<li>
+													<div class="table-spollers__name">Push-up эффект губ</div>
+													<span></span>
+													<div class="table-spollers__price">2 990 р</div>
+												</li>
+											</ul>
+										</div>
+										<div class="spollers__table table-spollers">
+											<div class="table-spollers__title">
+												Удаление филлера
+											</div>
+											<ul>
+												<li>
+													<div class="table-spollers__name">Удаление филлеоа лонгидазой</div>
+													<span></span>
+													<div class="table-spollers__price">7 990 р</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="spollers__item other">
+								<div data-spoller class="spollers__title">
+									<div class="spollers__center">
+										<span>С какого возраста рекомендуется посещение косметолога?</span>
+									</div>
+									<div class="spollers__right">
+										<div class="plus-minus"></div>
+									</div>
+								</div>
+								<div class="spollers__body">
+									<p>
+										Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+										продлением красоты.  Врач косметолог поможет омолодить вашу кожу, исправить
+										контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+										новообразования. Проведет диагностику и  поможет вылечить дерматологическое
+										кожное заболевание, подобрав наиболее эффективные процедуры.
+									</p>
+								</div>
+							</div>
+							<div class="spollers__item other">
+								<div data-spoller class="spollers__title">
+									<div class="spollers__center">
+										<span>С какими проблемами поможет справиться врач-косметолог?</span>
+									</div>
+									<div class="spollers__right">
+										<div class="plus-minus"></div>
+									</div>
+								</div>
+								<div class="spollers__body">
+									<p>
+										Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+										продлением красоты.  Врач косметолог поможет омолодить вашу кожу, исправить
+										контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+										новообразования. Проведет диагностику и  поможет вылечить дерматологическое
+										кожное заболевание, подобрав наиболее эффективные процедуры.
+									</p>
+								</div>
+							</div>
+							<div class="spollers__item other">
+								<div data-spoller class="spollers__title">
+									<div class="spollers__center">
+										<span>Какие процедуры в области косметологии можно провести для омоложения
+											кожи?</span>
+									</div>
+									<div class="spollers__right">
+										<div class="plus-minus"></div>
+									</div>
+								</div>
+								<div class="spollers__body">
+									<p>
+										Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+										продлением красоты.  Врач косметолог поможет омолодить вашу кожу, исправить
+										контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+										новообразования. Проведет диагностику и  поможет вылечить дерматологическое
+										кожное заболевание, подобрав наиболее эффективные процедуры.
+									</p>
+								</div>
+							</div>
+							<div class="spollers__item other">
+								<div data-spoller class="spollers__title">
+									<div class="spollers__center">
+										<span>Какие методы коррекции волос представлены в области трихологии?</span>
+									</div>
+									<div class="spollers__right">
+										<div class="plus-minus"></div>
+									</div>
+								</div>
+								<div class="spollers__body">
+									<p>
+										Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+										продлением красоты.  Врач косметолог поможет омолодить вашу кожу, исправить
+										контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+										новообразования. Проведет диагностику и  поможет вылечить дерматологическое
+										кожное заболевание, подобрав наиболее эффективные процедуры.
+									</p>
+								</div>
+							</div>
+							<div class="spollers__item other">
+								<div data-spoller class="spollers__title">
+									<div class="spollers__center">
+										<span>Как часто можно повторно делать инъекции диспорта и радиесса для коррекции
+											возрастных изменений?</span>
+									</div>
+									<div class="spollers__right">
+										<div class="plus-minus"></div>
+									</div>
+								</div>
+								<div class="spollers__body">
+									<p>
+										Косметология позволяет решать самые разные проблемы, связанные с эстетикой и
+										продлением красоты.  Врач косметолог поможет омолодить вашу кожу, исправить
+										контур лица, избавиться от шрамов и рубцов, удалить нежелательные
+										новообразования. Проведет диагностику и  поможет вылечить дерматологическое
+										кожное заболевание, подобрав наиболее эффективные процедуры.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="block-banner block1">
+				<div class="container">
+					<div class="block-banner__content">
+						<img loading="lazy" src="img/image18.webp" alt="" class="block-banner__pic1">
+						<img loading="lazy" src="img/bg1.webp" alt="" class="block-banner__bg1">
+						<img loading="lazy" src="img/bg2.webp" alt="" class="block-banner__bg2">
+						<img loading="lazy" src="img/image19.webp" alt="" class="block-banner__pic2">
+						<div class="block-banner__body">
+							<div class="block-banner__title">
+								Получить бесплатную консультацию
+							</div>
+							<p>
+								Мы готовы вам предложить инновационные методики, эффективные препараты для идеальной
+								красоты и молодости
+							</p>
+							<a href="#" class="btn">
+								<img loading="lazy" src="img/icon/whatsapp.svg" alt="">
+								<span>
+									Написать в WhatsApp
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		{% include 'blocks/footer.njk' %}
+	</div>
+	<script
+		src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&amp;lang=ru_RU&amp;_v=20240623012845&_v=20250429150847"></script>
+	<div id="call" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div data-close class="popup__close">
+					<img loading="lazy" src="img/icon/close.svg" alt="">
+				</div>
+				<div class="popup__body">
+					<div class="popup__title">Заказать звонок</div>
+					<form action="#" class="form">
+						<div class="form__inputs">
+							<div class="form__input">
+								<input autocomplete="off" type="text" name="form[]" placeholder="Ваше имя">
+							</div>
+							<div class="form__input">
+								<input data-required autocomplete="off" type="text" name="form[]"
+									placeholder="Номер телефона">
+							</div>
+						</div>
+						<button type="submit" class="btn">
+							Отправить
+						</button>
+						<div class="form__text">
+							Нажимая на кнопку “Отправить” вы соглашаетесь с политикой конфиденциальности
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% include 'blocks/scripts.njk' %}
+</body>
+
+</html>
