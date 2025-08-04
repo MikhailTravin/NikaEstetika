@@ -866,9 +866,15 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
 }
 .lock body {
   overflow: hidden;
+}
+.loaded body {
+  opacity: 1;
 }
 .menu-open body::before {
   content: "";

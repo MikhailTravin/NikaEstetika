@@ -424,3 +424,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 //========================================================================================================================================================
+
+// Добавляем класс 'loaded' после полной загрузки страницы
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    document.documentElement.classList.add('loaded');
+  }, 900);
+});

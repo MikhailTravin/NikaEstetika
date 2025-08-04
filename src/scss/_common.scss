@@ -4,8 +4,13 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
+  opacity: 0;
+  transition: opacity 0.3s ease 0s;
   .lock & {
     overflow: hidden;
+  }
+  .loaded & {
+    opacity: 1;
   }
   .menu-open & {
     &::before {
