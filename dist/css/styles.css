@@ -173,10 +173,6 @@ a {
 }
 @media (max-width: 768px) {
   .header {
-    -webkit-transition: background-color 0.3s ease, -webkit-box-shadow 0s ease;
-    transition: background-color 0.3s ease, -webkit-box-shadow 0s ease;
-    transition: background-color 0.3s ease, box-shadow 0s ease;
-    transition: background-color 0.3s ease, box-shadow 0s ease, -webkit-box-shadow 0s ease;
     background-color: #f8fafb;
     background-image: -webkit-gradient(linear, left top, left bottom, from(#cfded6), color-stop(14.9%, rgba(207, 222, 214, 0)), to(rgba(207, 222, 214, 0)));
     background-image: linear-gradient(to bottom, #cfded6 0%, rgba(207, 222, 214, 0) 14.9%, rgba(207, 222, 214, 0) 100%);
