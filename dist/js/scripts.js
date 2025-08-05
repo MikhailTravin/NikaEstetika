@@ -153,44 +153,32 @@ function uniqArray(array) {
 
 // Добавление к шапке при скролле
 const header = document.querySelector('.header');
+const SCROLL_THRESHOLD = 10; 
+let lastKnownScrollPosition = 0;
+let isHeaderScrolled = false;
 
-let ticking = false;
-let lastScrollY = window.scrollY;
+function updateHeaderState(scrollPos) {
+  const shouldBeScrolled = scrollPos > SCROLL_THRESHOLD;
 
-function updateHeader() {
-  if (lastScrollY > 0) {
-    header.classList.add('_header-scroll');
-  } else {
-    header.classList.remove('_header-scroll');
-  }
-  ticking = false;
-}
-
-function requestTick() {
-  if (!ticking) {
-    requestAnimationFrame(updateHeader);
-    ticking = true;
+  if (shouldBeScrolled !== isHeaderScrolled) {
+    isHeaderScrolled = shouldBeScrolled;
+    if (shouldBeScrolled) {
+      header.classList.add('_header-scroll');
+    } else {
+      header.classList.remove('_header-scroll');
+    }
   }
 }
 
-function onScroll() {
-  lastScrollY = window.scrollY;
-  requestTick();
+function handleScroll() {
+  lastKnownScrollPosition = window.scrollY || window.pageYOffset;
+  updateHeaderState(lastKnownScrollPosition);
 }
 
-window.addEventListener('scroll', onScroll, { passive: true });
+window.addEventListener('scroll', handleScroll, { passive: true });
+window.addEventListener('touchmove', handleScroll, { passive: true });
 
-window.addEventListener('touchstart', () => {
-  lastScrollY = window.scrollY;
-  requestTick();
-}, { passive: true });
-
-window.addEventListener('touchmove', () => {
-  lastScrollY = window.scrollY;
-  requestTick();
-}, { passive: true });
-
-updateHeader();
+handleScroll();
 
 //========================================================================================================================================================
 
