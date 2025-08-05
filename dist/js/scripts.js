@@ -153,7 +153,6 @@ function uniqArray(array) {
 
 // Добавление к шапке при скролле
 const header = document.querySelector('.header');
-if (!header) return;
 
 let ticking = false;
 let lastScrollY = window.scrollY;
