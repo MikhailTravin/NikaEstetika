@@ -164,14 +164,16 @@ a {
   top: 0;
   left: 0;
   width: 100%;
+  background: rgba(255, 255, 255, 0);
   z-index: 100;
   -webkit-transition: background-color 0.3s, -webkit-box-shadow 0.3s;
   transition: background-color 0.3s, -webkit-box-shadow 0.3s;
   transition: box-shadow 0.3s, background-color 0.3s;
   transition: box-shadow 0.3s, background-color 0.3s, -webkit-box-shadow 0.3s;
+  will-change: background-color, box-shadow;
 }
 .header._header-scroll {
-  background-color: #f8fafb;
+  background: #f8fafb;
   -webkit-box-shadow: 0 35px 60px 0 rgba(8, 30, 22, 0.15);
           box-shadow: 0 35px 60px 0 rgba(8, 30, 22, 0.15);
 }
@@ -184,7 +186,7 @@ a {
   }
 }
 .menu-open .header._header-scroll {
-  background-color: transparent;
+  background: transparent;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -866,9 +868,14 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
+  -webkit-overflow-scrolling: touch;
+}
+@media (max-width: 768px) {
+  body {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+  }
 }
 .lock body {
   overflow: hidden;
