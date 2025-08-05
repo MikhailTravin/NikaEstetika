@@ -8,6 +8,24 @@
     transition:
         background-color 0.3s ease,
         box-shadow 0.3s ease;
+    @media (max-width: 768px) {
+        transition:
+            background-color 0.3s ease,
+            box-shadow 0s ease;
+        background-color: #f8fafb;
+        background-image: -webkit-linear-gradient(
+            top,
+            #cfded6 0%,
+            rgba(207, 222, 214, 0) 14.9%,
+            rgba(207, 222, 214, 0) 100%
+        );
+        background-image: linear-gradient(
+            to bottom,
+            #cfded6 0%,
+            rgba(207, 222, 214, 0) 14.9%,
+            rgba(207, 222, 214, 0) 100%
+        );
+    }
     &._header-scroll {
         background-color: #f8fafb;
         box-shadow: 0 35px 60px 0 rgba(8, 30, 22, 0.15);
