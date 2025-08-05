@@ -153,15 +153,45 @@ function uniqArray(array) {
 
 // Добавление к шапке при скролле
 const header = document.querySelector('.header');
-if (header) {
-  window.addEventListener('scroll', function () {
-    if (window.scrollY > 0) {
-      header.classList.add('_header-scroll');
-    } else {
-      header.classList.remove('_header-scroll');
-    }
-  });
+if (!header) return;
+
+let ticking = false;
+let lastScrollY = window.scrollY;
+
+function updateHeader() {
+  if (lastScrollY > 0) {
+    header.classList.add('_header-scroll');
+  } else {
+    header.classList.remove('_header-scroll');
+  }
+  ticking = false;
 }
+
+function requestTick() {
+  if (!ticking) {
+    requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
+}
+
+function onScroll() {
+  lastScrollY = window.scrollY;
+  requestTick();
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+
+window.addEventListener('touchstart', () => {
+  lastScrollY = window.scrollY;
+  requestTick();
+}, { passive: true });
+
+window.addEventListener('touchmove', () => {
+  lastScrollY = window.scrollY;
+  requestTick();
+}, { passive: true });
+
+updateHeader();
 
 //========================================================================================================================================================
 
@@ -370,7 +400,7 @@ if (mapContainer) {
   const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
       loadYandexMapScript();
-      observer.unobserve(mapContainer); 
+      observer.unobserve(mapContainer);
     }
   }, { threshold: 0.1 });
 
