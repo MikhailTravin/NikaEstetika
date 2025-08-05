@@ -3,13 +3,13 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(248, 250, 251, 0);
+    background-color: transparent;
     z-index: 100;
     transition:
-        box-shadow 0.3s,
-        background-color 0.3s;
+        background-color 0.3s ease,
+        box-shadow 0.3s ease;
     &._header-scroll {
-        background-color: rgba(248, 250, 251, 1);
+        background-color: #f8fafb;
         box-shadow: 0 35px 60px 0 rgba(8, 30, 22, 0.15);
         @media (min-width: 992px) {
             .header__logo img {
@@ -22,7 +22,7 @@
     }
     .menu-open & {
         &._header-scroll {
-            background-color: rgba(248, 250, 251, 0);
+            background-color: transparent;
             box-shadow: none;
         }
     }
