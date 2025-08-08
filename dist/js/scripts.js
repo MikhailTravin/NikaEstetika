@@ -153,7 +153,7 @@ function uniqArray(array) {
 
 // Добавление к шапке при скролле
 const header = document.querySelector('.header');
-const SCROLL_THRESHOLD = 10; 
+const SCROLL_THRESHOLD = 10;
 let lastKnownScrollPosition = 0;
 let isHeaderScrolled = false;
 
@@ -755,13 +755,26 @@ function tabs() {
     if (el.closest('[data-tabs-title]')) {
       const tabTitle = el.closest('[data-tabs-title]');
       const tabsBlock = tabTitle.closest('[data-tabs]');
-      if (!tabTitle.classList.contains('_tab-active') && !tabsBlock.querySelector('._slide')) {
-        let tabActiveTitle = tabsBlock.querySelectorAll('[data-tabs-title]._tab-active');
-        tabActiveTitle = Array.from(tabActiveTitle).filter(item => item.closest('[data-tabs]') === tabsBlock);
-        if (tabActiveTitle.length) tabActiveTitle[0].classList.remove('_tab-active');
-        tabTitle.classList.add('_tab-active');
-        setTabsStatus(tabsBlock);
+      const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+      if (isMobile && tabsBlock.classList.contains('_tab-spoller')) {
+        if (tabTitle.classList.contains('_tab-active')) {
+          tabTitle.classList.remove('_tab-active');
+        } else {
+          let tabActiveTitles = tabsBlock.querySelectorAll('[data-tabs-title]._tab-active');
+          tabActiveTitles.forEach(activeTitle => activeTitle.classList.remove('_tab-active'));
+          tabTitle.classList.add('_tab-active');
+        }
+      } else {
+        if (!tabTitle.classList.contains('_tab-active') && !tabsBlock.querySelector('._slide')) {
+          let tabActiveTitle = tabsBlock.querySelectorAll('[data-tabs-title]._tab-active');
+          tabActiveTitle = Array.from(tabActiveTitle).filter(item => item.closest('[data-tabs]') === tabsBlock);
+          if (tabActiveTitle.length) tabActiveTitle[0].classList.remove('_tab-active');
+          tabTitle.classList.add('_tab-active');
+        }
       }
+
+      setTabsStatus(tabsBlock);
       e.preventDefault();
     }
   }
